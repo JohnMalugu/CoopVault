@@ -4,7 +4,7 @@ import { clsx } from 'clsx'
 import { useAuthStore } from '@/store/authStore'
 import { useUIStore } from '@/store/uiStore'
 import { getInitials } from '@/utils/formatters'
-import { AlertTriangle, Banknote, BarChart3, BookText, Briefcase, Building2, Calculator, CheckCircle, CreditCard, Folder, Gift, Handshake, Hash, icons, Landmark, LayoutDashboard, LineChart, MessageSquare, TrendingUp, User, Wallet } from 'lucide-react'
+import { AlertTriangle, Banknote, BarChart3, BookText, Briefcase, Building2, Calculator, CheckCircle, ChevronRight, CreditCard, Folder, Gift, Handshake, Hash, Landmark, LayoutDashboard, LineChart, MessageSquare, TrendingUp, User, Wallet } from 'lucide-react'
 
 interface NavItem {
   to?: string
@@ -57,17 +57,17 @@ const NavGroup: React.FC<{ item: NavItem }> = ({ item }) => {
   const [open, setOpen] = useState(false)
   const Icon = item.icon
 
+  // Common styling for the icon and label container
+  const navClass = ({ isActive }: { isActive?: boolean } = {}) => clsx(
+    'flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 mb-0.5',
+    isActive
+      ? 'bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400 font-semibold'
+      : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white'
+  )
+
   if (item.to) {
     return (
-      <NavLink
-        to={item.to}
-        className={({ isActive }) => clsx(
-          'flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 mb-0.5',
-          isActive
-            ? 'bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400 font-semibold'
-            : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white'
-        )}
-      >
+      <NavLink to={item.to} className={navClass}>
         <Icon size={18} strokeWidth={2.25} className="flex-shrink-0" />
         <span className="flex-1">{item.label}</span>
         {item.badge && (
@@ -81,15 +81,12 @@ const NavGroup: React.FC<{ item: NavItem }> = ({ item }) => {
 
   return (
     <>
-      <div
-        className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white cursor-pointer mb-0.5 transition-all duration-200"
-        onClick={() => setOpen(o => !o)}
-      >
-        <span className="text-base w-5 text-center flex-shrink-0">{item.icon}</span>
+      <div className={clsx(navClass(), 'cursor-pointer')} onClick={() => setOpen(o => !o)}>
+        <Icon size={18} strokeWidth={2.25} className="flex-shrink-0" />
         <span className="flex-1">{item.label}</span>
-        <span className={clsx('text-xs transition-transform duration-200', open && 'rotate-90')}>›</span>
+        <ChevronRight size={14} className={clsx('transition-transform duration-200', open && 'rotate-90')} />
       </div>
-      <div className={clsx('overflow-hidden transition-all duration-300', open ? 'max-h-48' : 'max-h-0')}>
+      <div className={clsx('overflow-hidden transition-all duration-300', open ? 'max-h-60' : 'max-h-0')}>
         {item.children?.map(child => (
           <NavLink
             key={child.to}
@@ -100,7 +97,9 @@ const NavGroup: React.FC<{ item: NavItem }> = ({ item }) => {
                 ? 'text-primary-600 dark:text-primary-400 font-semibold'
                 : 'text-gray-500 dark:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-800 dark:hover:text-gray-200'
             )}
-          >{child.label}</NavLink>
+          >
+            {child.label}
+          </NavLink>
         ))}
       </div>
     </>
