@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAuthStore } from '@/store/authStore'
 import { mockLogin } from '@/api/auth'
 import toast from 'react-hot-toast'
+import { User, ShieldCheck } from 'lucide-react'
 
 export const LoginPage: React.FC = () => {
   const [username, setUsername] = useState('MEM-00234')
@@ -60,7 +61,8 @@ export const LoginPage: React.FC = () => {
                   : 'text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'
               ].join(' ')}
             >
-              {r === 'member' ? '👤' : '🛡️'} {r.charAt(0).toUpperCase() + r.slice(1)}
+              {r === 'member' ? <User size={16} /> : <ShieldCheck size={16} />}
+              {r}
             </button>
           ))}
         </div>
