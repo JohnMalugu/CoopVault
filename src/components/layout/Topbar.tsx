@@ -4,7 +4,7 @@ import { useAuthStore } from '@/store/authStore'
 import { useUIStore } from '@/store/uiStore'
 import { getInitials } from '@/utils/formatters'
 import toast from 'react-hot-toast'
-import { Sun, Moon } from 'lucide-react'
+import { Sun, Moon, Bell } from 'lucide-react'
 
 const routeTitles: Record<string, string> = {
   '/dashboard': 'Dashboard',
@@ -62,11 +62,14 @@ export const Topbar: React.FC = () => {
 
         {/* Notifications */}
         <button
-          className="relative w-9 h-9 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-colors"
-          onClick={() => toast('No new notifications', { icon: '🔔' })}
+          className="relative w-9 h-9 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-all active:scale-95"
+          onClick={() => toast('No new notifications', { 
+            icon: <Bell size={18} className="text-accent-500" />,
+            className: "dark:bg-gray-800 dark:text-white"
+          })}
         >
-          🔔
-          <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-accent-500 rounded-full border-2 border-white dark:border-gray-900" />
+          <Bell size={18} />
+          <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-accent-500 rounded-full border-2 border-white dark:border-gray-900" />
         </button>
 
         {/* Profile dropdown */}
