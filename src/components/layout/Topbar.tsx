@@ -4,7 +4,7 @@ import { useAuthStore } from '@/store/authStore'
 import { useUIStore } from '@/store/uiStore'
 import { getInitials } from '@/utils/formatters'
 import toast from 'react-hot-toast'
-import { Sun, Moon, Bell, User, Settings, Globe } from 'lucide-react'
+import { Sun, Moon, Bell, User, Settings, Globe, LogOut } from 'lucide-react'
 
 const routeTitles: Record<string, string> = {
   '/dashboard': 'Dashboard',
@@ -108,7 +108,8 @@ export const Topbar: React.FC = () => {
                     onClick={() => { logout(); navigate('/login') }}
                     className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-red-500 hover:bg-red-50 dark:hover:bg-red-950/40 cursor-pointer transition-colors"
                   >
-                    <span>🚪</span> Logout
+                    <LogOut size={16} />
+                    <span className="font-bold">Logout</span>
                   </div>
                 </div>
               </div>
