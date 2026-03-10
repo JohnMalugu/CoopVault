@@ -4,7 +4,7 @@ import { useAuthStore } from '@/store/authStore'
 import { useUIStore } from '@/store/uiStore'
 import { getInitials } from '@/utils/formatters'
 import toast from 'react-hot-toast'
-import { Sun, Moon, Bell } from 'lucide-react'
+import { Sun, Moon, Bell, User, Settings, Globe } from 'lucide-react'
 
 const routeTitles: Record<string, string> = {
   '/dashboard': 'Dashboard',
@@ -90,16 +90,17 @@ export const Topbar: React.FC = () => {
                   <div className="text-xs text-gray-400">{user?.memberId}</div>
                 </div>
                 {[
-                  { icon: '👤', label: 'My Profile', action: () => navigate('/profile') },
-                  { icon: '⚙️', label: 'Settings', action: () => toast('Settings coming soon') },
-                  { icon: '🌍', label: 'Language: EN', action: () => toast('Language switching coming soon') },
+                  { icon: User, label: 'My Profile', action: () => navigate('/profile') },
+                  { icon: Settings, label: 'Settings', action: () => toast('Settings coming soon') },
+                  { icon: Globe, label: 'Language: EN', action: () => toast('Language switching coming soon') },
                 ].map(item => (
                   <div
                     key={item.label}
                     onClick={() => { item.action(); setDropdownOpen(false) }}
                     className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white cursor-pointer transition-colors"
                   >
-                    <span>{item.icon}</span> {item.label}
+                    <item.icon size={16} className="text-gray-400 group-hover:text-inherit" />
+                    <span className="font-medium">{item.label}</span>
                   </div>
                 ))}
                 <div className="border-t border-gray-100 dark:border-gray-800">
