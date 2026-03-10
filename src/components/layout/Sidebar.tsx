@@ -4,44 +4,45 @@ import { clsx } from 'clsx'
 import { useAuthStore } from '@/store/authStore'
 import { useUIStore } from '@/store/uiStore'
 import { getInitials } from '@/utils/formatters'
+import { AlertTriangle, Banknote, BookText, Briefcase, Calculator, CheckCircle, CreditCard, Folder, Gift, Handshake, Landmark, LayoutDashboard, LineChart, MessageSquare, User, Wallet } from 'lucide-react'
 
 interface NavItem {
   to?: string
   label: string
-  icon: string
+  icon: React.ElementType
   badge?: number
   children?: { to: string; label: string }[]
   adminOnly?: boolean
 }
 
 const navItems: NavItem[] = [
-  { to: '/dashboard', label: 'Dashboard', icon: '📊' },
-  { to: '/ledger', label: 'Ledger', icon: '📒' },
-  { to: '/documents', label: 'Documents', icon: '📁' },
+  { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+  { to: '/ledger', label: 'Ledger', icon: BookText },
+  { to: '/documents', label: 'Documents', icon: Folder },
 ]
 
 const selfServiceItems: NavItem[] = [
   {
-    label: 'My Profile', icon: '👤',
+    label: 'My Profile', icon: User,
     children: [
       { to: '/profile', label: 'Biodata' },
       { to: '/profile?tab=kin', label: 'Next of Kin' },
       { to: '/profile?tab=bank', label: 'Bank Details' },
     ],
   },
-  { to: '/savings', label: 'My Savings', icon: '💰' },
-  { to: '/deposits', label: 'My Deposits', icon: '🏧' },
-  { to: '/shares', label: 'My Shares', icon: '📈' },
-  { to: '/loans', label: 'My Loans', icon: '💳', badge: 2 },
-  { to: '/guarantee', label: 'Loan Guarantee', icon: '🤝' },
-  { to: '/approve', label: 'Approve Loan', icon: '✅' },
-  { to: '/calculator', label: 'Loan Calculator', icon: '🧮' },
-  { to: '/fees', label: 'Fees & Charges', icon: '💼' },
-  { to: '/fund-release', label: 'Fund Release', icon: '💸' },
-  { to: '/complaints', label: 'Complaints', icon: '📝' },
-  { to: '/contributions', label: 'Other Contributions', icon: '🎁' },
-  { to: '/payments', label: 'Payment Submissions', icon: '💳' },
-  { to: '/penalties', label: 'Loan Penalties', icon: '⚠️' },
+  { to: '/savings', label: 'My Savings', icon: Wallet },
+  { to: '/deposits', label: 'My Deposits', icon: Landmark },
+  { to: '/shares', label: 'My Shares', icon: LineChart },
+  { to: '/loans', label: 'My Loans', icon: CreditCard, badge: 2 },
+  { to: '/guarantee', label: 'Loan Guarantee', icon: Handshake },
+  { to: '/approve', label: 'Approve Loan', icon: CheckCircle },
+  { to: '/calculator', label: 'Loan Calculator', icon: Calculator },
+  { to: '/fees', label: 'Fees & Charges', icon: Briefcase },
+  { to: '/fund-release', label: 'Fund Release', icon: Banknote },
+  { to: '/complaints', label: 'Complaints', icon: MessageSquare },
+  { to: '/contributions', label: 'Other Contributions', icon: Gift },
+  { to: '/payments', label: 'Payment Submissions', icon: CreditCard },
+  { to: '/penalties', label: 'Loan Penalties', icon: AlertTriangle },
 ]
 
 const adminItems: NavItem[] = [
