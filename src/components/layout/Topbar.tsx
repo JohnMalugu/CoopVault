@@ -4,6 +4,7 @@ import { useAuthStore } from '@/store/authStore'
 import { useUIStore } from '@/store/uiStore'
 import { getInitials } from '@/utils/formatters'
 import toast from 'react-hot-toast'
+import { Sun, Moon } from 'lucide-react'
 
 const routeTitles: Record<string, string> = {
   '/dashboard': 'Dashboard',
@@ -56,7 +57,7 @@ export const Topbar: React.FC = () => {
           className="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-colors"
           title="Toggle dark mode"
         >
-          {darkMode ? '☀️' : '🌙'}
+          {darkMode ? <Sun size={18} /> : <Moon size={18} />}
         </button>
 
         {/* Notifications */}
