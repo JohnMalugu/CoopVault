@@ -61,7 +61,7 @@ export const LoginPage: React.FC = () => {
                   : 'text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'
               ].join(' ')}
             >
-              {r === 'member' ? <User size={16} /> : <ShieldCheck size={16} />}
+              {r === 'member' ? <User size={18} /> : <ShieldCheck size={18} />}
               {r}
             </button>
           ))}
