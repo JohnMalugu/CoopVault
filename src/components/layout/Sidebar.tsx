@@ -4,7 +4,7 @@ import { clsx } from 'clsx'
 import { useAuthStore } from '@/store/authStore'
 import { useUIStore } from '@/store/uiStore'
 import { getInitials } from '@/utils/formatters'
-import { AlertTriangle, Banknote, BookText, Briefcase, Calculator, CheckCircle, CreditCard, Folder, Gift, Handshake, Landmark, LayoutDashboard, LineChart, MessageSquare, User, Wallet } from 'lucide-react'
+import { AlertTriangle, Banknote, BarChart3, BookText, Briefcase, Building2, Calculator, CheckCircle, CreditCard, Folder, Gift, Handshake, Hash, Landmark, LayoutDashboard, LineChart, MessageSquare, TrendingUp, User, Wallet } from 'lucide-react'
 
 interface NavItem {
   to?: string
@@ -46,11 +46,11 @@ const selfServiceItems: NavItem[] = [
 ]
 
 const adminItems: NavItem[] = [
-  { to: '/members', label: 'Members', icon: '👥', adminOnly: true },
-  { to: '/budget', label: 'Budget & Planning', icon: '📊', adminOnly: true },
-  { to: '/expenses', label: 'Expenses', icon: '💹', adminOnly: true },
-  { to: '/assets', label: 'Asset Management', icon: '🏢', adminOnly: true },
-  { to: '/accounting', label: 'Accounting', icon: '🔢', adminOnly: true },
+  { to: '/members', label: 'Members', icon: User, adminOnly: true },
+  { to: '/budget', label: 'Budget & Planning', icon: BarChart3, adminOnly: true },
+  { to: '/expenses', label: 'Expenses', icon: TrendingUp, adminOnly: true },
+  { to: '/assets', label: 'Asset Management', icon: Building2, adminOnly: true },
+  { to: '/accounting', label: 'Accounting', icon: Hash, adminOnly: true },
 ]
 
 const NavGroup: React.FC<{ item: NavItem }> = ({ item }) => {
