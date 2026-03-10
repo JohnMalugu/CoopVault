@@ -4,7 +4,7 @@ import { clsx } from 'clsx'
 import { useAuthStore } from '@/store/authStore'
 import { useUIStore } from '@/store/uiStore'
 import { getInitials } from '@/utils/formatters'
-import { AlertTriangle, Banknote, BarChart3, BookText, Briefcase, Building2, Calculator, CheckCircle, CreditCard, Folder, Gift, Handshake, Hash, Landmark, LayoutDashboard, LineChart, MessageSquare, TrendingUp, User, Wallet } from 'lucide-react'
+import { AlertTriangle, Banknote, BarChart3, BookText, Briefcase, Building2, Calculator, CheckCircle, CreditCard, Folder, Gift, Handshake, Hash, icons, Landmark, LayoutDashboard, LineChart, MessageSquare, TrendingUp, User, Wallet } from 'lucide-react'
 
 interface NavItem {
   to?: string
@@ -55,6 +55,7 @@ const adminItems: NavItem[] = [
 
 const NavGroup: React.FC<{ item: NavItem }> = ({ item }) => {
   const [open, setOpen] = useState(false)
+  const Icon = item.icon
 
   if (item.to) {
     return (
@@ -67,7 +68,7 @@ const NavGroup: React.FC<{ item: NavItem }> = ({ item }) => {
             : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white'
         )}
       >
-        <span className="text-base w-5 text-center flex-shrink-0">{item.icon}</span>
+        <Icon size={18} strokeWidth={2.25} className="flex-shrink-0" />
         <span className="flex-1">{item.label}</span>
         {item.badge && (
           <span className="bg-accent-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
