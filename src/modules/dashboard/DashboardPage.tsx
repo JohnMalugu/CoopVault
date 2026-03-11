@@ -7,7 +7,7 @@ import { ActivityChart } from '@/components/charts/ActivityChart'
 import { PortfolioChart } from '@/components/charts/PortfolioChart'
 import { getGreeting, formatCurrency, formatDate } from '@/utils/formatters'
 import { mockLedger } from '@/utils/mockData'
-import { Banknote, Calculator, FileDown, Handshake, MessageSquareText } from 'lucide-react'
+import { Banknote, Briefcase, Calculator, FileDown, Handshake, MessageSquareText } from 'lucide-react'
 
 const quickLinks = [
   { icon: Calculator, label: 'Loan Calculator', to: '/calculator', color: 'text-blue-500' },
@@ -15,8 +15,7 @@ const quickLinks = [
   { icon: FileDown, label: 'Download Docs', to: '/documents', color: 'text-emerald-500' },
   { icon: Banknote, label: 'Make Payment', to: '/payments', color: 'text-amber-500' },
   { icon: Handshake, label: 'Loan Guarantee', to: '/guarantee', color: 'text-indigo-500' },
-  { icon: '💼', label: 'View Fees', to: '/fees' },
-]
+  { icon: Briefcase, label: 'View Fees', to: '/fees', color: 'text-rose-500' },]
 
 export const DashboardPage: React.FC = () => {
   const { user } = useAuthStore()
