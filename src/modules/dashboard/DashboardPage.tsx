@@ -7,7 +7,7 @@ import { ActivityChart } from '@/components/charts/ActivityChart'
 import { PortfolioChart } from '@/components/charts/PortfolioChart'
 import { getGreeting, formatCurrency, formatDate } from '@/utils/formatters'
 import { mockLedger } from '@/utils/mockData'
-import { Banknote, Briefcase, Calculator, FileDown, Handshake, MessageSquareText, TrendingUp } from 'lucide-react'
+import { Banknote, Briefcase, Calculator, FileDown, Handshake, MessageSquareText, TrendingUp, Wallet } from 'lucide-react'
 
 const quickLinks = [
   { icon: Calculator, label: 'Loan Calculator', to: '/calculator', color: 'text-blue-500' },
@@ -42,8 +42,7 @@ export const DashboardPage: React.FC = () => {
       {/* Stats */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
 <StatCard icon={TrendingUp} label="Total Shares" value="TZS 450K" change="↑ 12.5%" changeType="up" accent="teal" onClick={() => navigate('/shares')} />        <StatCard icon="💰" label="Total Savings" value="TZS 1.2M" change="↑ 8.2% this month" changeType="up" accent="gold" onClick={() => navigate('/savings')} />
-        <StatCard icon="🏧" label="Deposits" value="TZS 320K" change="↑ 5.1% this month" changeType="up" accent="green" onClick={() => navigate('/deposits')} />
-        <StatCard icon="💳" label="Pending Loans" value="TZS 800K" change="⟳ 2 active loans" changeType="neutral" accent="blue" onClick={() => navigate('/loans')} />
+<StatCard icon={Wallet} label="Total Savings" value="TZS 1.2M" change="↑ 8.2%" changeType="up" accent="gold" onClick={() => navigate('/savings')} />        <StatCard icon="💳" label="Pending Loans" value="TZS 800K" change="⟳ 2 active loans" changeType="neutral" accent="blue" onClick={() => navigate('/loans')} />
         <StatCard icon="🤲" label="Social Welfare" value="TZS 50K" change="● Active member" changeType="neutral" accent="purple" onClick={() => navigate('/contributions')} />
       </div>
 
