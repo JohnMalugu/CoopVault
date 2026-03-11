@@ -19,7 +19,7 @@ import {
 } from 'lucide-react'
 import { useAuthStore } from '@/store/authStore'
 import { StatCard } from '@/components/ui/Card'
-import { Badge, statusVariant } from '@/components/ui/Badge'
+import { Badge } from '@/components/ui/Badge'
 import { ActivityChart } from '@/components/charts/ActivityChart'
 import { PortfolioChart } from '@/components/charts/PortfolioChart'
 import { getGreeting, formatCurrency, formatDate } from '@/utils/formatters'
