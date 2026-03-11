@@ -22,7 +22,7 @@ export const Card: React.FC<CardProps> = ({ children, className, hover, onClick 
 )
 
 interface StatCardProps {
-  icon: string
+  icon: React.ElementType
   label: string
   value: string
   change?: string
