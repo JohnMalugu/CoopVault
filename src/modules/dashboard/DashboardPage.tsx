@@ -7,9 +7,10 @@ import { ActivityChart } from '@/components/charts/ActivityChart'
 import { PortfolioChart } from '@/components/charts/PortfolioChart'
 import { getGreeting, formatCurrency, formatDate } from '@/utils/formatters'
 import { mockLedger } from '@/utils/mockData'
+import { Calculator } from 'lucide-react'
 
 const quickLinks = [
-  { icon: '🧮', label: 'Loan Calculator', to: '/calculator' },
+  { icon: Calculator, label: 'Loan Calculator', to: '/calculator', color: 'text-blue-500' },
   { icon: '📝', label: 'File Complaint', to: '/complaints' },
   { icon: '📥', label: 'Download Docs', to: '/documents' },
   { icon: '💸', label: 'Make Payment', to: '/payments' },
