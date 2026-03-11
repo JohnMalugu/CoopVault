@@ -12,7 +12,8 @@ import { Calculator, FileDown, MessageSquareText } from 'lucide-react'
 const quickLinks = [
   { icon: Calculator, label: 'Loan Calculator', to: '/calculator', color: 'text-blue-500' },
   { icon: MessageSquareText, label: 'File Complaint', to: '/complaints', color: 'text-purple-500' },
-  { icon: FileDown, label: 'Download Docs', to: '/documents', color: 'text-emerald-500' },  { icon: '💸', label: 'Make Payment', to: '/payments' },
+  { icon: FileDown, label: 'Download Docs', to: '/documents', color: 'text-emerald-500' },
+  { icon: '💸', label: 'Make Payment', to: '/payments' },
   { icon: '🤝', label: 'Loan Guarantee', to: '/guarantee' },
   { icon: '💼', label: 'View Fees', to: '/fees' },
 ]
