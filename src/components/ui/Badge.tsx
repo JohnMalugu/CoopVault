@@ -1,12 +1,13 @@
 import React from 'react'
 import { clsx } from 'clsx'
 
-type Variant = 'success' | 'warning' | 'danger' | 'info' | 'neutral' | 'primary'
+type Variant = 'success' | 'warning' | 'danger' | 'info' | 'neutral' | 'primary' | 'outline'
 
 interface Props {
   variant?: Variant
   children: React.ReactNode
   dot?: boolean
+  className?: string 
 }
 
 const variantClasses: Record<Variant, string> = {
@@ -16,11 +17,19 @@ const variantClasses: Record<Variant, string> = {
   info:    'bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400',
   neutral: 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400',
   primary: 'bg-primary-50 dark:bg-primary-950/60 text-primary-600 dark:text-primary-400',
+  outline: 'bg-transparent border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400',
 }
 
-export const Badge: React.FC<Props> = ({ variant = 'neutral', children, dot = true }) => (
-  <span className={clsx('inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold', variantClasses[variant])}>
-    {dot && <span className="text-[8px]">●</span>}
+export const Badge: React.FC<Props> = ({ variant = 'neutral', children, dot = true, className }) => (
+  <span className={clsx(
+    'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider', 
+    variantClasses[variant],
+    className
+  )}>
+    {/* I replaced the bullet text with a slightly cleaner div for the dot */}
+    {dot && variant !== 'outline' && (
+      <span className="w-1.5 h-1.5 rounded-full bg-current opacity-80" />
+    )}
     {children}
   </span>
 )
