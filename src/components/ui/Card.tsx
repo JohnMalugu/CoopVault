@@ -23,7 +23,7 @@ export const Card: React.FC<CardProps> = ({ children, className, hover, onClick 
 )
 
 interface StatCardProps {
-  icon: LucideIcon // Changed from string to LucideIcon
+  icon: LucideIcon
   label: string
   value: string
   change?: string
