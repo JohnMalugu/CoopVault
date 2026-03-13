@@ -59,7 +59,7 @@ export const DepositsPage: React.FC = () => {
         <StatCard 
           icon={CheckCircle2} 
           label="Active Deposits" 
-          value="3" 
+          value="2" 
           accent="teal" 
         />
         <StatCard 
