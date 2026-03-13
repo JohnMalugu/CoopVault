@@ -85,7 +85,7 @@ export const DepositsPage: React.FC = () => {
         onFilter={() => toast.success('Filters applied')}
         onReset={() => { setFromDate('2024-01-01'); setToDate('2024-12-31'); setCategory('all') }}
       />
-
+      
       <Table
         title="Deposit History"
         data={mockDeposits}
