@@ -28,7 +28,7 @@ interface TableProps<T> {
 
 export function Table<T extends { id: string }>({
   columns, data, title, actions, loading,
-  emptyIcon = '📭', emptyTitle = 'No records founds', emptyDesc = 'Try adjusting your filters.',
+  emptyIcon = '📭', emptyTitle = 'No records found', emptyDesc = 'Try adjusting your filters.',
   currentPage = 1, totalPages = 1, total = 0, pageSize = 10, onPageChange
 }: TableProps<T>) {
   const start = (currentPage - 1) * pageSize + 1
