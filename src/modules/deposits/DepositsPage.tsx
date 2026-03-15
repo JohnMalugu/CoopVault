@@ -53,7 +53,7 @@ export const DepositsPage: React.FC = () => {
         <StatCard 
           icon={Landmark} 
           label="Total Deposits" 
-          value="TZS 220K" 
+          value="TZS 420K" 
           accent="blue" 
         />
         <StatCard 
