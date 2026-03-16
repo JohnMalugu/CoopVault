@@ -40,7 +40,7 @@ export const LoanCalculator: React.FC = () => {
         {/* Input panel */}
         <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden shadow-card">
           <div className="px-6 py-4 border-b border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/30">
-            <div className="font-bold text-gray-900 dark:text-white">🧮 Your Financial Position</div>
+            <div className="font-bold text-gray-900 dark:text-white"> Your Financial Position</div>
           </div>
           <div className="p-6 space-y-4">
             <Input label="Savings Value (TZS)" type="number" value={savings} onChange={e => setSavings(+e.target.value)} />
