@@ -8,7 +8,7 @@ import { Badge, statusVariant } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { mockSavings } from '@/utils/mockData'
 import { formatCurrency, formatDate } from '@/utils/formatters'
-import { Wallet } from 'lucide-react'
+import { Calendar, Wallet } from 'lucide-react'
 
 export const SavingsPage: React.FC = () => {
   const [fromDate, setFromDate] = useState('2024-01-01')
