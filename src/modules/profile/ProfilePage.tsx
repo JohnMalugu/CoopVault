@@ -18,7 +18,6 @@ import { Stepper } from '@/components/ui/Stepper'
 import { Input, Select } from '@/components/ui/Input'
 import { Button } from '@/components/ui/Button'
 
-// Define the steps with their corresponding icons
 const steps = [
   { label: 'Biodata', icon: User },
   { label: 'Next of Kin', icon: Users },
