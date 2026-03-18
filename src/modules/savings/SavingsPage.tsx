@@ -40,7 +40,14 @@ export const SavingsPage: React.FC = () => {
           changeType="up" 
           accent="gold" 
         />
-        <StatCard icon="📅" label="This Month" value="TZS 50,000" change="Regular contribution" changeType="neutral" accent="teal" />
+        <StatCard 
+          icon={Calendar} 
+          label="This Month" 
+          value="TZS 50,000" 
+          change="Regular contribution" 
+          changeType="neutral" 
+          accent="teal" 
+        />
         <StatCard icon="📈" label="Interest Earned" value="TZS 48,200" change="6% p.a." changeType="up" accent="green" />
       </div>
 
