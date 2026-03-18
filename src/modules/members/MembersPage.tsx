@@ -8,7 +8,7 @@ import { Badge, statusVariant } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { mockMembers } from '@/utils/mockData'
 import { formatCurrency, formatDate } from '@/utils/formatters'
-import { UserCheck, UserPlus, Users } from 'lucide-react'
+import { UserCheck, UserMinus, UserPlus, Users } from 'lucide-react'
 
 export const MembersPage: React.FC = () => {
   const [search, setSearch] = useState('')
@@ -36,7 +36,7 @@ export const MembersPage: React.FC = () => {
         <StatCard icon={Users} label="Total Members" value="1,248" accent="teal" />
         <StatCard icon={UserCheck} label="Active" value="1,194" accent="green" />
         <StatCard icon={UserPlus} label="New This Month" value="23" accent="gold" />
-        <StatCard icon="⏸️" label="Inactive" value="54" accent="blue" />
+        <StatCard icon={UserMinus} label="Inactive" value="54" accent="blue" />
       </div>
 
       <FilterBar
