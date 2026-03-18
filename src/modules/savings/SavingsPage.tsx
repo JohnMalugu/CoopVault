@@ -8,7 +8,7 @@ import { Badge, statusVariant } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { mockSavings } from '@/utils/mockData'
 import { formatCurrency, formatDate } from '@/utils/formatters'
-import { Calendar, Wallet } from 'lucide-react'
+import { Calendar, TrendingUp, Wallet } from 'lucide-react'
 
 export const SavingsPage: React.FC = () => {
   const [fromDate, setFromDate] = useState('2024-01-01')
@@ -48,7 +48,14 @@ export const SavingsPage: React.FC = () => {
           changeType="neutral" 
           accent="teal" 
         />
-        <StatCard icon="📈" label="Interest Earned" value="TZS 48,200" change="6% p.a." changeType="up" accent="green" />
+        <StatCard 
+          icon={TrendingUp} 
+          label="Interest Earned" 
+          value="TZS 48,200" 
+          change="6% p.a." 
+          changeType="up" 
+          accent="green" 
+        />
       </div>
 
       <FilterBar
