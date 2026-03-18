@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import toast from 'react-hot-toast'
 import { PageHeader } from '@/components/ui/PageHeader'
 import { Stepper } from '@/components/ui/Stepper'
-import { Input, Select, Textarea } from '@/components/ui/Input'
+import { Input, Select } from '@/components/ui/Input'
 import { Button } from '@/components/ui/Button'
 
 const steps = [
