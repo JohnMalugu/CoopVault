@@ -31,7 +31,14 @@ export const SavingsPage: React.FC = () => {
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
-        <StatCard icon="💰" label="Total Savings" value="TZS 1.2M" change="↑ 8.2% this month" changeType="up" accent="gold" />
+        <StatCard 
+          icon={Wallet} 
+          label="Total Savings" 
+          value="TZS 1.2M" 
+          change="↑ 8.2% this month" 
+          changeType="up" 
+          accent="gold" 
+        />
         <StatCard icon="📅" label="This Month" value="TZS 50,000" change="Regular contribution" changeType="neutral" accent="teal" />
         <StatCard icon="📈" label="Interest Earned" value="TZS 48,200" change="6% p.a." changeType="up" accent="green" />
       </div>
