@@ -16,19 +16,19 @@ export const SharesPage: React.FC = () => {
   const [category, setCategory] = useState('all')
 
   return (
-    <div className="animate-fade-in">
+    <div className="animate-fade-in space-y-6">
       <PageHeader
         title="My Shares"
         subtitle="Track your share portfolio and transactions"
         actions={
-          <>
+          <div className="flex items-center gap-2">
             <Button variant="secondary" size="sm" className="gap-2">
-                <Download size={16}/> Export
+              <Download size={16} /> Export
             </Button>
             <Button size="sm" className="gap-2" onClick={() => toast.success('Opening share purchase form...')}>
               <Plus size={16} /> Buy Shares
             </Button>
-          </>
+          </div>
         }
       />
 
