@@ -8,7 +8,7 @@ import { Badge, statusVariant } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { mockShares } from '@/utils/mockData'
 import { formatCurrency, formatDate } from '@/utils/formatters'
-import { Activity, Hash, LineChart, Trophy } from 'lucide-react'
+import { Activity, Download, Hash, LineChart, Trophy } from 'lucide-react'
 
 export const SharesPage: React.FC = () => {
   const [fromDate, setFromDate] = useState('2024-01-01')
@@ -22,6 +22,9 @@ export const SharesPage: React.FC = () => {
         subtitle="Track your share portfolio and transactions"
         actions={
           <>
+            <Button variant="secondary" size="sm" className="gap-2">
+                <Download size={16}/> Export
+            </Button>
             <Button variant="secondary" size="sm">📥 Export</Button>
             <Button size="sm" onClick={() => toast.success('Opening share purchase form...')}>+ Buy Shares</Button>
           </>
