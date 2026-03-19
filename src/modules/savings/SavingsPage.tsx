@@ -105,7 +105,7 @@ export const SavingsPage: React.FC = () => {
   )
 }
 
-// Patch table to accept index
+// Patch table to accept index()
 declare module '@/components/ui/Table' {
   interface Column<T> {
     render?: (row: T, index?: number) => React.ReactNode
