@@ -8,7 +8,7 @@ import { Badge, statusVariant } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { mockShares } from '@/utils/mockData'
 import { formatCurrency, formatDate } from '@/utils/formatters'
-import { Activity, Download, Hash, LineChart, Trophy } from 'lucide-react'
+import { Activity, Download, Hash, LineChart, Plus, Trophy } from 'lucide-react'
 
 export const SharesPage: React.FC = () => {
   const [fromDate, setFromDate] = useState('2024-01-01')
