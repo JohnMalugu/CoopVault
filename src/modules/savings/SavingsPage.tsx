@@ -22,14 +22,15 @@ export const SavingsPage: React.FC = () => {
         title="My Savings"
         subtitle="Track your savings contributions and interest"
         actions={
-          <>
-          <Button variant="secondary" size="sm" className="gap-2">
+          <div className="flex items-center gap-2">
+            {/* Updated string icons to Lucide components */}
+            <Button variant="secondary" size="sm" className="gap-2">
               <Download size={16} /> Export
             </Button>
             <Button size="sm" className="gap-2" onClick={() => toast.success('Opening new contribution form...')}>
               <Plus size={16} /> New Contribution
             </Button>
-          </>
+          </div>
         }
       />
 
