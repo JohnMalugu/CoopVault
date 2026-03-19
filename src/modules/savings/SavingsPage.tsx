@@ -23,7 +23,6 @@ export const SavingsPage: React.FC = () => {
         subtitle="Track your savings contributions and interest"
         actions={
           <div className="flex items-center gap-2">
-            {/* Updated string icons to Lucide components */}
             <Button variant="secondary" size="sm" className="gap-2">
               <Download size={16} /> Export
             </Button>
