@@ -17,7 +17,7 @@ export const SavingsPage: React.FC = () => {
   const [page, setPage] = useState(1)
 
   return (
-    <div className="animate-fade-in">
+    <div className="animate-fade-in space-y-6">
       <PageHeader
         title="My Savings"
         subtitle="Track your savings contributions and interest"
