@@ -8,6 +8,7 @@ import { Badge, statusVariant } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { mockShares } from '@/utils/mockData'
 import { formatCurrency, formatDate } from '@/utils/formatters'
+import { LineChart } from 'lucide-react'
 
 export const SharesPage: React.FC = () => {
   const [fromDate, setFromDate] = useState('2024-01-01')
@@ -28,7 +29,7 @@ export const SharesPage: React.FC = () => {
       />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-5">
-        <StatCard icon="📈" label="Total Shares" value="TZS 450K" accent="teal" />
+        <StatCard icon={LineChart} label="Total Shares" value="TZS 450K" accent="teal" />
         <StatCard icon="🔢" label="Share Units" value="180" accent="gold" />
         <StatCard icon="💹" label="Unit Value" value="TZS 2,500" accent="green" />
         <StatCard icon="🏆" label="Dividend 2023" value="TZS 34,000" accent="blue" />
