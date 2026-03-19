@@ -26,7 +26,6 @@ export const SavingsPage: React.FC = () => {
           <Button variant="secondary" size="sm" className="gap-2">
               <Download size={16} /> Export
             </Button>
-            <Button variant="secondary" size="sm" icon="📥">Export</Button>
             <Button size="sm" icon="+" onClick={() => toast.success('Opening new contribution form...')}>
               New Contribution
             </Button>
