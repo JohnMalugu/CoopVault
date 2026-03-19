@@ -25,7 +25,6 @@ export const SharesPage: React.FC = () => {
             <Button variant="secondary" size="sm" className="gap-2">
                 <Download size={16}/> Export
             </Button>
-            <Button variant="secondary" size="sm">📥 Export</Button>
             <Button size="sm" onClick={() => toast.success('Opening share purchase form...')}>+ Buy Shares</Button>
           </>
         }
