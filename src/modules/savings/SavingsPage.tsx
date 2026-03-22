@@ -18,7 +18,6 @@ export const SavingsPage: React.FC = () => {
 
   return (
     <div className="animate-fade-in space-y-6">
-      //page
       <PageHeader
         title="My Savings"
         subtitle="Track your savings contributions and interest"
