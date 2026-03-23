@@ -294,6 +294,7 @@ export const AssetsPage: React.FC = () => (
 
 export const AccountingPage: React.FC = () => (
   <div className="animate-fade-in">
+    //work on this
     <PageHeader title="Accounting" subtitle="Financial reports and accounting integration" />
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-5">
       <StatCard icon="📈" label="Total Assets" value="TZS 2.8B" accent="teal" />
