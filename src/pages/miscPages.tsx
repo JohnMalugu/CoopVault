@@ -11,6 +11,7 @@ import { formatCurrency, formatDate } from '@/utils/formatters'
 import { StatCard } from '@/components/ui/Card'
 import { AccountingChart } from '@/components/charts/AccountingChart'
 import { FilterBar } from '@/components/ui/FilterBar'
+import { GitGraph } from 'lucide-react'
 
 export const ComplaintsPage: React.FC = () => {
   const [subject, setSubject] = useState('')
@@ -296,7 +297,7 @@ export const AccountingPage: React.FC = () => (
   <div className="animate-fade-in">
     <PageHeader title="Accounting" subtitle="Financial reports and accounting integration" />
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-5">
-      <StatCard icon="📈" label="Total Assets" value="TZS 2.8B" accent="teal" />
+      <StatCard icon={GitGraph} label="Total Assets" value="TZS 2.8B" accent="teal" />
       <StatCard icon="💳" label="Total Liabilities" value="TZS 1.9B" accent="gold" />
       <StatCard icon="💰" label="Net Worth" value="TZS 900M" accent="green" />
       <StatCard icon="📊" label="Revenue YTD" value="TZS 320M" accent="blue" />
