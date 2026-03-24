@@ -11,7 +11,7 @@ import { formatCurrency, formatDate } from '@/utils/formatters'
 import { StatCard } from '@/components/ui/Card'
 import { AccountingChart } from '@/components/charts/AccountingChart'
 import { FilterBar } from '@/components/ui/FilterBar'
-import { CardSim, Coins, GitGraph } from 'lucide-react'
+import { CardSim, Coins, GitGraph, MonitorCheck } from 'lucide-react'
 
 export const ComplaintsPage: React.FC = () => {
   const [subject, setSubject] = useState('')
@@ -300,7 +300,7 @@ export const AccountingPage: React.FC = () => (
       <StatCard icon={GitGraph} label="Total Assets" value="TZS 2.8B" accent="teal" />
       <StatCard icon={CardSim} label="Total Liabilities" value="TZS 1.9B" accent="gold" />
       <StatCard icon={Coins} label="Net Worth" value="TZS 900M" accent="green" />
-      <StatCard icon="📊" label="Revenue YTD" value="TZS 320M" accent="blue" />
+      <StatCard icon={MonitorCheck} label="Revenue YTD" value="TZS 320M" accent="blue" />
     </div>
     <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-5 shadow-card">
       <div className="font-bold text-gray-900 dark:text-white mb-4">Income vs Expenses — Monthly 2024</div>
