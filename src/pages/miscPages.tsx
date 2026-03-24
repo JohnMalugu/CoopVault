@@ -293,6 +293,7 @@ export const AssetsPage: React.FC = () => (
 )
 
 export const AccountingPage: React.FC = () => (
+  //za leo
   <div className="animate-fade-in">
     <PageHeader title="Accounting" subtitle="Financial reports and accounting integration" />
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-5">
