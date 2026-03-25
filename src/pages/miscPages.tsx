@@ -200,7 +200,7 @@ export const PenaltiesPage: React.FC = () => (
         { key: 'loanId', header: 'Loan' },
         { key: 'penaltyType', header: 'Penalty Type' },
         { key: 'daysDelayed', header: 'Days Delayed' },
-        { key: 'amountRecovered', header: 'Amount Recovered' },
+        { key: ']amountRecovered', header: 'Amount Recovered' },
         { key: 'pendingAmount', header: 'Pending' },
         { key: 'status', header: 'Status' },
       ]}
