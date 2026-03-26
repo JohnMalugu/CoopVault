@@ -11,6 +11,7 @@ import { formatCurrency, formatDate } from '@/utils/formatters'
 import { StatCard } from '@/components/ui/Card'
 import { AccountingChart } from '@/components/charts/AccountingChart'
 import { FilterBar } from '@/components/ui/FilterBar'
+import { DroneIcon } from 'lucide-react'
 
 export const ComplaintsPage: React.FC = () => {
   const [subject, setSubject] = useState('')
@@ -215,7 +216,7 @@ export const BudgetPage: React.FC = () => (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
       <StatCard icon="📊" label="Annual Budget" value="TZS 450M" accent="teal" />
       <StatCard icon="💸" label="Spent YTD" value="TZS 312M" accent="gold" />
-      <StatCard icon="✅" label="Remaining" value="TZS 138M" accent="green" />
+      <StatCard icon={DroneIcon} label="Remaining" value="TZS 138M" accent="green" />
     </div>
     <Table
       title="Budget by Department"
