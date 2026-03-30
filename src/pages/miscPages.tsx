@@ -11,7 +11,7 @@ import { formatCurrency, formatDate } from '@/utils/formatters'
 import { StatCard } from '@/components/ui/Card'
 import { AccountingChart } from '@/components/charts/AccountingChart'
 import { FilterBar } from '@/components/ui/FilterBar'
-import { CheckCircle2 } from 'lucide-react'
+import { CheckCircle2, DollarSign } from 'lucide-react'
 
 export const ComplaintsPage: React.FC = () => {
   const [subject, setSubject] = useState('')
