@@ -11,7 +11,7 @@ import { formatCurrency, formatDate } from '@/utils/formatters'
 import { StatCard } from '@/components/ui/Card'
 import { AccountingChart } from '@/components/charts/AccountingChart'
 import { FilterBar } from '@/components/ui/FilterBar'
-import { BarChart3, CheckCircle2, DollarSign, Puzzle } from 'lucide-react'
+import { BarChart3, CheckCircle2, DollarSign, Download, Puzzle } from 'lucide-react'
 
 export const ComplaintsPage: React.FC = () => {
   const [subject, setSubject] = useState('')
@@ -127,7 +127,7 @@ export const LedgerPage: React.FC = () => {
           <>
           
             <Button variant="secondary" size="sm">{Puzzle} Export PDF</Button>
-            <Button variant="secondary" size="sm">{} Export Excel</Button>
+            <Button variant="secondary" size="sm">{Download} Export Excel</Button>
           </>
         }
       />
