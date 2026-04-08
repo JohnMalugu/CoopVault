@@ -11,7 +11,7 @@ import { formatCurrency, formatDate } from '@/utils/formatters'
 import { StatCard } from '@/components/ui/Card'
 import { AccountingChart } from '@/components/charts/AccountingChart'
 import { FilterBar } from '@/components/ui/FilterBar'
-import { BarChart3, CheckCircle2, DollarSign } from 'lucide-react'
+import { BarChart3, CheckCircle2, DollarSign, Download } from 'lucide-react'
 import { selectHttpOptionsAndBodyInternal } from '@apollo/client'
 
 export const ComplaintsPage: React.FC = () => {
@@ -127,7 +127,7 @@ export const LedgerPage: React.FC = () => {
         actions={
           <>
           //test cmnt
-            <Button variant="secondary" size="sm">{selectHttpOptionsAndBodyInternal} Export PDF</Button>
+            <Button variant="secondary" size="sm">{Download} Export PDF</Button>
             <Button variant="secondary" size="sm">{} Export Excel</Button>
           </>
         }
