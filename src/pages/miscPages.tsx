@@ -126,7 +126,7 @@ export const LedgerPage: React.FC = () => {
         actions={
           <>
             <Button variant="secondary" size="sm">{} as from Export PDF replace </Button>
-            <Button variant="secondary" size="sm">{} as from Export Excel replace </Button>
+            <Button variant="secondary" size="sm">{} as from Export Excel replace</Button>
           </>
         }
       />
