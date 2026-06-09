@@ -125,7 +125,7 @@ export const LedgerPage: React.FC = () => {
         subtitle="Complete record of all financial transactions"
         actions={
           <>
-            <Button variant="secondary" size="sm">📄 Export PDF {}</Button>
+            <Button variant="secondary" size="sm">📄 Export as PDF {}</Button>
             <Button variant="secondary" size="sm">📊 Export as Excel {}</Button>
             <Button variant="secondary" size="sm">📊 Export as Word {}</Button>
 
