@@ -11,7 +11,22 @@ import { formatCurrency, formatDate } from '@/utils/formatters'
 import { StatCard } from '@/components/ui/Card'
 import { AccountingChart } from '@/components/charts/AccountingChart'
 import { FilterBar } from '@/components/ui/FilterBar'
-import { BarChart3, CheckCircle2, DollarSign } from 'lucide-react'
+import { 
+  BarChart3, 
+  CheckCircle2, 
+  DollarSign, 
+  PenSquare, 
+  FileSpreadsheet, 
+  FileText, 
+  Download, 
+  Sparkles, 
+  TrendingUp, 
+  CreditCard, 
+  Wallet, 
+  PieChart,
+  Plus,
+  ArrowRight
+} from 'lucide-react'
 
 export const ComplaintsPage: React.FC = () => {
   const [subject, setSubject] = useState('')
@@ -25,7 +40,9 @@ export const ComplaintsPage: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden shadow-card">
           <div className="px-6 py-4 border-b border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/30">
-            <div className="font-bold text-gray-900 dark:text-white">📝 New Submission</div>
+            <div className="font-bold text-gray-900 dark:text-white flex items-center gap-2">
+              <PenSquare className="w-4 h-4 text-gray-500" /> New Submission
+            </div>
           </div>
           <div className="p-6 space-y-4">
             <Select label="Type" value={type} onChange={e => setType(e.target.value)}
@@ -34,7 +51,9 @@ export const ComplaintsPage: React.FC = () => {
             <Textarea label="Description" value={desc} onChange={e => setDesc(e.target.value)} placeholder="Describe in detail..." />
             <Select label="Priority" value={priority} onChange={e => setPriority(e.target.value)}
               options={[{value:'normal',label:'Normal'},{value:'high',label:'High'},{value:'urgent',label:'Urgent'}]} />
-            <Button onClick={() => { toast.success('Submitted! Ref: CMP-2024-089'); setSubject(''); setDesc('') }}>Submit →</Button>
+            <Button onClick={() => { toast.success('Submitted! Ref: CMP-2024-089'); setSubject(''); setDesc('') }}>
+              Submit <ArrowRight className="w-4 h-4 ml-1 inline-block" />
+            </Button>
           </div>
         </div>
         <Table
@@ -100,19 +119,23 @@ export const DocumentsPage: React.FC = () => (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {mockDocuments.map(doc => (
         <div key={doc.id} className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-5 shadow-card flex items-center gap-4 hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-200">
-          <div className="text-3xl">{doc.type === 'excel' ? '📊' : doc.type === 'word' ? '📝' : '📄'}</div>
+          <div className="text-gray-500 flex items-center justify-center">
+            {doc.type === 'excel' ? <FileSpreadsheet className="w-8 h-8 text-emerald-600" /> : doc.type === 'word' ? <FileText className="w-8 h-8 text-blue-600" /> : <FileText className="w-8 h-8 text-gray-600" />}
+          </div>
           <div className="flex-1 min-w-0">
             <div className="font-semibold text-sm text-gray-900 dark:text-white truncate">{doc.title}</div>
             <div className="text-xs text-gray-400 mt-0.5">{doc.type.toUpperCase()} · {doc.size} · {formatDate(doc.updatedAt)}</div>
             <Badge variant="neutral" dot={false}>{doc.category}</Badge>
           </div>
-          <Button variant="primary" size="sm" onClick={() => toast.success(`Downloading ${doc.title}...`)}>⬇</Button>
+          <Button variant="primary" size="sm" onClick={() => toast.success(`Downloading ${doc.title}...`)}>
+            <Download className="w-4 h-4" />
+          </Button>
         </div>
       ))}
     </div>
   </div>
 )
-//work on buttons
+
 export const LedgerPage: React.FC = () => {
   const [fromDate, setFromDate] = useState('2024-01-01')
   const [toDate, setToDate] = useState('2024-12-31')
@@ -125,8 +148,12 @@ export const LedgerPage: React.FC = () => {
         subtitle="Complete record of all financial transactions"
         actions={
           <>
-            <Button variant="secondary" size="sm">📄 Export PDF</Button>
-            <Button variant="secondary" size="sm">📊 Export Excel</Button>
+            <Button variant="secondary" size="sm" className="gap-2">
+              <FileText className="w-4 h-4" /> Export PDF
+            </Button>
+            <Button variant="secondary" size="sm" className="gap-2">
+              <FileSpreadsheet className="w-4 h-4" /> Export Excel
+            </Button>
           </>
         }
       />
@@ -167,7 +194,7 @@ export const PaymentsPage: React.FC = () => (
     <PageHeader
       title="Payment Submissions"
       subtitle="Track all your payment submissions"
-      actions={<Button size="sm" icon="+" onClick={() => toast.success('Opening payment form...')}>New Payment</Button>}
+      actions={<Button size="sm" icon={<Plus className="w-4 h-4" />} onClick={() => toast.success('Opening payment form...')}>New Payment</Button>}
     />
     <Table
       title="Payment History"
@@ -179,7 +206,7 @@ export const PaymentsPage: React.FC = () => (
         { key: 'amount', header: 'Amount', render: r => <span className="font-mono font-semibold text-gray-900 dark:text-white">{formatCurrency(r.amount)}</span> },
         { key: 'status', header: 'Status', render: r => <Badge variant={statusVariant(r.status)}>{r.status}</Badge> },
         { key: 'receiptNo', header: 'Receipt', render: r => <span className="font-semibold">{r.receiptNo}</span> },
-        { key: 'a', header: 'Action', render: () => <Button variant="secondary" size="sm">Download</Button> },
+        { key: 'a', header: 'Action', render: () => <Button variant="secondary" size="sm" className="gap-1"><Download className="w-3.5 h-3.5" /> Download</Button> },
       ]}
     />
   </div>
@@ -193,7 +220,7 @@ export const PenaltiesPage: React.FC = () => (
       data={mockPenalties}
       total={0}
       totalPages={0}
-      emptyIcon="🎉"
+      emptyIcon={<Sparkles className="w-8 h-8 text-amber-500" />}
       emptyTitle="No penalties!"
       emptyDesc="You have no late payment penalties. Keep it up!"
       columns={[
@@ -249,7 +276,7 @@ export const ExpensesPage: React.FC = () => {
   return (
     <div className="animate-fade-in">
       <PageHeader title="Expenses" subtitle="Track organizational expenditures"
-        actions={<Button size="sm" onClick={() => toast.success('Opening expense form')}>+ Add Expense</Button>}
+        actions={<Button size="sm" className="gap-1" onClick={() => toast.success('Opening expense form')}><Plus className="w-4 h-4" /> Add Expense</Button>}
       />
       <Table
         title="Expense Records"
@@ -272,7 +299,7 @@ export const ExpensesPage: React.FC = () => {
 export const AssetsPage: React.FC = () => (
   <div className="animate-fade-in">
     <PageHeader title="Asset Management" subtitle="Track organizational assets"
-      actions={<Button size="sm">+ Add Asset</Button>}
+      actions={<Button size="sm" className="gap-1"><Plus className="w-4 h-4" /> Add Asset</Button>}
     />
     <Table
       title="Asset Register"
@@ -294,14 +321,13 @@ export const AssetsPage: React.FC = () => (
 )
 
 export const AccountingPage: React.FC = () => (
-  //za leo
   <div className="animate-fade-in">
     <PageHeader title="Accounting" subtitle="Financial reports and accounting integration" />
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-5">
-      <StatCard icon="📈" label="Total Assets" value="TZS 2.8B" accent="teal" />
-      <StatCard icon="💳" label="Total Liabilities" value="TZS 1.9B" accent="gold" />
-      <StatCard icon="💰" label="Net Worth" value="TZS 900M" accent="green" />
-      <StatCard icon="📊" label="Revenue YTD" value="TZS 320M" accent="blue" />
+      <StatCard icon={TrendingUp} label="Total Assets" value="TZS 2.8B" accent="teal" />
+      <StatCard icon={CreditCard} label="Total Liabilities" value="TZS 1.9B" accent="gold" />
+      <StatCard icon={Wallet} label="Net Worth" value="TZS 900M" accent="green" />
+      <StatCard icon={PieChart} label="Revenue YTD" value="TZS 320M" accent="blue" />
     </div>
     <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-5 shadow-card">
       <div className="font-bold text-gray-900 dark:text-white mb-4">Income vs Expenses — Monthly 2024</div>
