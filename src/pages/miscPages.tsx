@@ -221,7 +221,6 @@ export const PenaltiesPage: React.FC = () => (
       total={0}
       totalPages={0}
       emptyIcon={<Sparkles className="w-8 h-8 text-amber-500" />}
-      // this error to be resolved
       emptyTitle="No penalties!"
       emptyDesc="You have no late payment penalties. Keep it up!"
       columns={[
