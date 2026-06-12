@@ -216,7 +216,8 @@ export const PenaltiesPage: React.FC = () => (
   <div className="animate-fade-in">
     <PageHeader title="Loan Penalties" subtitle="Track late payment penalties on your loans" />
     <Table
-      title="Penalty Records"
+      title="Penalty Records ADD"
+      ob
       data={mockPenalties}
       total={0}
       totalPages={0}
