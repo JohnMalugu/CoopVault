@@ -218,7 +218,6 @@ export const PenaltiesPage: React.FC = () => (
     <Table
       title="Penalty Records ADD"
       object = {object}
-      obj = {object}
       data={mockPenalties}
       total={0}
       totalPages={0}
