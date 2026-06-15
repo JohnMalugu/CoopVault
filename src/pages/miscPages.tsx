@@ -217,7 +217,6 @@ export const PenaltiesPage: React.FC = () => (
     <PageHeader title="Loan Penalties" subtitle="Track late payment penalties on your loans" />
     <Table
       title="Penalty Records ADD"
-      object = {object}
       data={mockPenalties}
       total={0}
       totalPages={0}
