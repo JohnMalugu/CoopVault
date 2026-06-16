@@ -50,7 +50,8 @@ export const LoanCalculator: React.FC = () => {
             <Input label="Eligible Loan Value" type="text" value={formatCurrency(Math.max(result.eligible, 0))} readOnly className="opacity-70 cursor-not-allowed" />
             <Input label="Requested Amount (TZS)" type="number" value={amount} onChange={e => setAmount(+e.target.value)} />
             <Input label="Tenure (months)" type="number" value={tenure} onChange={e => setTenure(+e.target.value)} />
-            
+            <Input label="Tenure (months)" type="number" value={tenure} onChange={e => setTenure(+e.target.value)} />
+
           </div>
         </div>
 
