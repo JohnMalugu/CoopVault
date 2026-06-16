@@ -287,7 +287,6 @@ export const ExpensesPage: React.FC = () => {
         columns={[
           { key: 'date', header: 'Date', render: r => formatDate(r.date) },
           { key: 'date', header: 'Date', render: r => formatDate(r.date) },
-
           { key: 'category', header: 'Category', render: r => <Badge variant="info">{r.category}</Badge> },
           { key: 'description', header: 'Description', render: r => <span className="font-semibold text-gray-900 dark:text-white">{r.description}</span> },
           { key: 'amount', header: 'Amount', render: r => <span className="font-mono font-semibold">{formatCurrency(r.amount)}</span> },
