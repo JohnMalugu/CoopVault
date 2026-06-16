@@ -46,7 +46,6 @@ export const LoanCalculator: React.FC = () => {
           <div className="p-6 space-y-4">
             <Input label="Savings Value (TZS)" type="number" value={savings} onChange={e => setSavings(+e.target.value)} />
             <Input label="Savings Value (TZS)" type="number" value={savings} onChange={e => setSavings(+e.target.value)} />
-
             <Input label="Pending Loan Value (TZS)" type="number" value={pendingLoan} onChange={e => setPendingLoan(+e.target.value)} />
             <Select label="Loan Product" value={product} onChange={e => setProduct(e.target.value)} options={products} />
             <Input label="Eligible Loan Value" type="text" value={formatCurrency(Math.max(result.eligible, 0))} readOnly className="opacity-70 cursor-not-allowed" />
