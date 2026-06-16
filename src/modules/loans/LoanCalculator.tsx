@@ -51,7 +51,6 @@ export const LoanCalculator: React.FC = () => {
             <Input label="Requested Amount (TZS)" type="number" value={amount} onChange={e => setAmount(+e.target.value)} />
             <Input label="Tenure (months)" type="number" value={tenure} onChange={e => setTenure(+e.target.value)} />
             <Input label="Tenure (months)" type="number" value={tenure} onChange={e => setTenure(+e.target.value)} />
-
           </div>
         </div>
 
