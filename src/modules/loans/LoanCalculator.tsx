@@ -67,6 +67,8 @@ export const LoanCalculator: React.FC = () => {
                 { label: 'Monthly Repayment', value: formatCurrency(Math.round(result.monthly)) },
                 { label: 'Total Interest', value: formatCurrency(Math.round(result.interest)) },
                 { label: 'Total Repayment', value: formatCurrency(Math.round(result.total)) },
+                { label: 'Total Repayment', value: formatCurrency(Math.round(result.total)) },
+
                 { label: 'Interest Rate', value: `${result.rate}% p.a.` }
               ].map(item => (
                 <div key={item.label} className="bg-white/10 rounded-xl p-3.5">
