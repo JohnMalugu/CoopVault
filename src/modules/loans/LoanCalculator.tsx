@@ -15,6 +15,7 @@ export const LoanCalculator: React.FC = () => {
   const [pendingLoan, setPendingLoan] = useState(0)
   const [product, setProduct] = useState(products[0].value)
   const [amount, setAmount] = useState(2000000)
+  const [price]
   const [tenure, setTenure] = useState(24)
   const [result, setResult] = useState({ eligible: 0, monthly: 0, interest: 0, total: 0, rate: 0 })
 
