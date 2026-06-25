@@ -58,11 +58,6 @@ const accentConfig: Record<string, { gradient: string; iconBg: string; iconText:
     iconBg: 'bg-violet-50 dark:bg-violet-500/10', 
     iconText: 'text-violet-600 dark:text-violet-400' 
   },
-  purple: { 
-    gradient: 'from-violet-600 to-violet-400', 
-    iconBg: 'bg-violet-50 dark:bg-violet-500/10', 
-    iconText: 'text-violet-600 dark:text-violet-400' 
-  },
 }
 
 export const StatCard: React.FC<StatCardProps> = ({
