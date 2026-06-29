@@ -15,7 +15,6 @@ export const AccountingChart: React.FC = () => {
   const gridColor = dark ? '#1f2937' : '#f3f4f6'
   const textColor = dark ? '#6b7280' : '#9ca3af'
 
-
   return (
     <Line
       data={{
