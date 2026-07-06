@@ -16,7 +16,6 @@ export const AccountingChart: React.FC = () => {
   const textColor = dark ? '#6b7280' : '#9ca3af'
 
 
-
   return (
     <Line
       data={{
