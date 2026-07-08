@@ -21,7 +21,7 @@ interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement
 interface OutputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string
   error: string
-  hint?: string
+  hint: string
 }
 
 const baseInput = 'w-full px-3 py-2.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/60 text-gray-900 dark:text-gray-100 text-sm font-sans outline-none transition-all duration-200 focus:border-primary-500 focus:bg-white dark:focus:bg-gray-900 focus:ring-2 focus:ring-primary-500/10 placeholder:text-gray-400 dark:placeholder:text-gray-600'
