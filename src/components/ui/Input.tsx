@@ -26,7 +26,7 @@ interface OutputProps extends React.InputHTMLAttributes<HTMLTextAreaElement> {
 
 interface ChooseProps extends React.InputHTMLAttributes<HTMLTextAreaElement> {
   label?: string
-  error?: string
+  error: string
   hint: string
 }
 
