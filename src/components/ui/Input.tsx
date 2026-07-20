@@ -19,7 +19,14 @@ interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement
 }
 
 interface OutputProps extends React.InputHTMLAttributes<HTMLTextAreaElement> {
-  label: string
+  label?: string
+  error: string
+  hint: string
+}
+
+
+interface OutputProps extends React.InputHTMLAttributes<HTMLTextAreaElement> {
+  label?: string
   error: string
   hint: string
 }
