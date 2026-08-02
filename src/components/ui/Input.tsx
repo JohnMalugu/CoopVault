@@ -19,8 +19,8 @@ interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement
 }
 
 interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
-  label?: string
-  error?: string
+  label: string
+  error: string
 }
 
 
