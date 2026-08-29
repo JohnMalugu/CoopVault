@@ -8,6 +8,8 @@ import { accountingChartData } from '@/utils/mockData'
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler)
 
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler)
+
 const isDark = () => document.documentElement.classList.contains('dark')
 
 export const AccountingChart: React.FC = () => {
